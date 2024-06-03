@@ -1,0 +1,351 @@
+// Reset de estilos padrão para evitar outlines indesejados
+* {
+    outline: none;
+}
+
+// Componente de ícone na barra de navegação
+.navbar-nav .popover-region .popover-region-toggle .icon {
+    font-weight: inherit;
+}
+
+.bg-white {
+    background-color: #114D82 !important;
+}
+
+/* Estilizando a scrollbar do elemento */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar */
+    border-radius: 8px; /* Bordas arredondadas */
+  }
+  
+  /* Cor de fundo da scrollbar */
+  ::-webkit-scrollbar-track {
+    background-color: #f4f4f4; /* Cor desejada */
+  }
+  
+  /* Cor do indicador da scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #8f9bb3; /* Cor desejada */
+  }
+  
+// img {
+//     max-width: 86vh
+// }
+
+// Estilos para o menu "More"
+.moremenu {
+    .nav-link {
+
+        &:hover,
+        &.focus {
+            outline: none !important;
+        }
+    }
+}
+
+// Login botão
+
+.txtl {
+    background-color: #007bff !important;
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: color 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    width: 120px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.login.pl-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer; /* Adicionei uma indicação de cursor para indicar clicabilidade */    
+}
+
+.txtl:hover {
+    background-color: #0250a3; /* Cor de fundo alterada no hover para um tom mais escuro */
+    outline: none;
+    color: #dddddd !important;
+}
+
+
+// Estilos para a logo
+.logo {
+    width: 280px;
+}
+
+// Estilos para o texto primário
+.text-primary {
+    color: white !important;
+}
+
+// Estilos para o grupo de entrada
+.input-group {
+    color: white !important;
+    font-weight: 500;
+}
+
+// Estilos para itens de navegação
+.nav-item {
+    outline: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+// Estilos para foco, exceto para elementos com foco visível
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+// Barra de navegação fixa no topo
+
+li[data-key="myhome"] {
+    display: none; 
+}
+
+.navbar.fixed-top {
+    border: none;
+    color: white;
+    height: 70px;
+    font-weight: 300;
+    background-color: transparent;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .primary-navigation {
+        .navigation {
+            height: 70px;
+            color: white;
+            font-weight: 300;
+            background-color: transparent;
+
+            .nav-link {
+                height: 70px;
+                border: none;
+                border-radius: 0;
+                color: white;
+                font-weight: 300;
+                background-color: transparent;
+                transition: font-weight 0.3s ease, border-bottom 0.9s ease;
+
+                &.active,
+                &:hover,
+                &:focus,
+                &:focus-visible {
+                    font-weight: 500;
+                    border-bottom: 2px solid #ffffff;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    outline: none !important;
+                }
+            }
+        }
+    }
+}
+
+// Container flexível para os elementos na barra de navegação
+.navbarcallbacks {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+// Navegação secundária
+.secondary-navigation {
+    border: none;
+    align-items: stretch;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 1021;
+    background-color: #114D82;
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.5));
+    position: fixed;
+    top: 70px;
+
+    >.moove-container-fluid {
+        padding: 0;
+    }
+
+    &.moove {
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .moremenu {
+        box-shadow: none;
+        background-color: inherit;
+        border-top: none;
+        border-bottom: none;
+        height: 60px;
+        font-weight: 300;
+    
+        .nav-tabs {
+            border: none;
+            background-color: transparent;
+            max-width: none;
+            font-weight: 300;
+    
+            .nav-link {
+                display: flex;
+                align-items: center;
+                white-space: nowrap;
+                color: #ddd;
+                border: none;
+                border-radius: 0;
+                font-weight: 300;
+                transition: all 0.4s ease;
+    
+                &.active {                    
+                    font-weight: 500;
+                }
+    
+                &:hover,
+                &:focus {
+                    background-color: transparent;
+                    color: #fff;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    
+}
+
+// Icones de notificação e mensagem
+.fa-bell {
+    color: white !important; // Cor padrão
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: #146ebe !important; // Cor ao passar o mouse, focar ou clicar
+    }
+
+    &.active {
+        color: #146ebe !important; // Cor quando o botão está ativo
+    }
+}
+
+.fa-message {
+    color: white !important; // Cor padrão
+    
+    &:hover,
+    &:focus,
+    &:active {
+        color: #146ebe !important; // Cor ao passar o mouse, focar ou clicar
+    }
+
+    &.active {
+        color: #146ebe !important; // Cor quando o botão está ativo
+    }
+}
+  
+
+// Estilos para a notificação popover
+.popover-region-notifications .popover-region-container {
+    @extend .scale-up;
+    top: 70px;
+
+    .popover-region-header-container {
+        height: 50px;
+        padding: 11px 20px 15px;
+        border-bottom: 1px solid rgba(120, 130, 140, 0.13);
+    }
+
+    .popover-region-content-container {
+        height: calc(100% - 50px);
+
+        .content-item-container {
+            line-height: initial;
+            background-color: #fff;
+            padding: 15px;
+
+            &.unread {
+                background-color: #f4f4f4;
+            }
+
+            &:hover {
+                background-color: $body-bg;
+                color: inherit;
+
+                .content-item-footer .timestamp {
+                    color: inherit;
+                }
+            }
+
+            .content-item-body {
+                font-weight: normal;
+                width: calc(100% - 54px);
+
+                h3,
+                .notification-message {
+                    font-size: 1.2rem;
+                    margin-bottom: 5px;
+                    font-weight: normal;
+                }
+
+                p {
+                    line-height: initial;
+                }
+
+                .notification-message {
+                    font-size: 1rem;
+                }
+            }
+
+            .view-more {
+                font-size: .9rem;
+            }
+
+            .content-item-footer .timestamp {
+                font-size: .9rem;
+                line-height: inherit;
+            }
+
+            .unread-count-container {
+                width: 24px;
+
+                .badge {
+                    background-color: $brand-primary;
+                    width: 21px;
+                    height: 21px;
+                    border-radius: 11px;
+                    line-height: 17px;
+                }
+            }
+        }
+    }
+
+    .popover-region-footer-container {
+        height: 50px;
+        padding: 15px 20px;
+        border: 1px solid #ddd;
+        margin: 0 -1px;
+
+        .popover-region-seeall-text {
+            line-height: initial;
+        }
+    }
+}
+
+// Exibição da notificação popover
+.popover-region-notifications .popover-region-container[aria-hidden="false"] {
+    @extend .scale-up-show;
+}
+
+// Estilos para o drawer à direita
+[data-region=right-hand-drawer].drawer {
+    top: 70px;
+    height: calc(100% - 70px);
+
+    .footer-container {
+        padding: .5rem 0;
+        background-color: #fff;
+        color: #1d2125;
+    }
+}

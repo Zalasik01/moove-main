@@ -1,0 +1,40 @@
+@mixin accessibilityfontsize($basesize) {
+    .mm {
+        font-size: $basesize !important;
+        transition: box-shadow 0.3s ease, border-left 0.3s ease !important;
+        background-color: #d9edf7 !important;
+        border-color: #85d5e5 !important;
+        color: #3a87ad !important;
+        border-top: 1px solid #5bc7dc !important;
+    }
+
+    #nav-drawer, #page, #top-footer {
+        font-size: $basesize;
+    }
+
+    h1,
+    #page #page-header h1,
+    #page #region-main h1 {
+        font-size: $basesize * 2.5;
+    }
+
+    h2 {
+        font-size: $basesize * 2;
+    }
+
+    h3 {
+        font-size: $basesize * 1.75;
+    }
+
+    h4 {
+        font-size: $basesize * 1.5;
+    }
+
+    h5 {
+        font-size: $basesize * 1.25;
+    }
+
+    h6 {
+        font-size: $basesize;
+    }
+}

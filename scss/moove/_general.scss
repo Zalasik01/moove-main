@@ -1,0 +1,211 @@
+body {
+    background-color: $background !important; /* stylelint-disable-line */
+}
+
+#page-header {
+    margin: 1.25rem auto;
+    padding: 0;
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    #page-navbar {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+
+    .courseheader {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+}
+
+.botao-container {
+    text-align: center;
+    display: flex;
+}
+
+.voltar, .prox {
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    display: inline-block;
+    color: #114D82;
+    font-weight: 600;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.btn .btn-link {
+    text-decoration: none !important;
+}
+
+.voltar i{
+    margin-right: 5px;
+}
+
+
+// Responsividade mobile
+
+@media (min-width: 768px) {
+    .voltar, .prox {
+        display: none;
+        color: #114D82;
+        background-color: #ffff;
+        border-color: #fff;  
+    }
+    .voltar:hover,
+        .voltar:focus,
+        .voltar:active,
+        .prox:hover,
+        .prox:focus,
+        .prox:active {
+            background-color: #fff;            
+    }      
+    .btn .btn-link {
+        text-decoration: none !important;
+    }    
+}
+
+// Mobile
+
+@media (max-width: 767.98px) {
+    #myBtn {
+        border: 0;
+        display: none !important;
+    }
+    .altimuss {
+        display: none !important;
+    }
+    #jump-to-activity {
+        display: none;
+    }
+    .row {
+        display: flex;
+        flex-wrap: nowrap;
+        width: calc(11.90375rem + 0.030vw);
+    }
+}
+
+
+.moove-container-fluid {
+    padding: 0;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card {
+    border: none;
+    -webkit-box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+    box-shadow: 0 0 35px 0 rgba(154, 161, 171, 0.15);
+}
+
+/* Remover informação da tela de lp */
+.altimuss {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.btnd {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    text-align: end;
+    button {
+        width: 130px;
+        // background-color: #146ebe;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: right;
+    }
+}
+
+.shadowartigos {
+    transition: box-shadow 0.3s ease, border-left 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0.375rem 1.5rem 0 rgb(142 147 152 / 45%) !important;
+        border-left: 2px solid #007bff !important;
+    }
+}
+
+.btnd2 {
+    margin: auto; /* Centraliza horizontalmente dentro do pai */
+    text-align: center;
+}
+
+.moove-container-fluid,
+.container-fluid {
+    max-width: 85%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container-fluid.tertiary-navigation {
+    max-width: 100%;
+}
+
+a {
+    transition: all 0.25s ease-out;
+    color: #114d82;
+}
+
+.dropdown-item:active,
+.dropdown-item:hover,
+.dropdown-item:focus,
+.dropdown-item:focus-within {
+    background-color: transparent !important;
+    font-weight: 500;
+    color: #114d82 !important;
+}
+
+
+@include media-breakpoint-up(md) {
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner,
+    #page.drawers .main-inner,
+    .moove-container-fluid,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 85%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .header-maxwidth {
+        max-width: 100%;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .pagelayout-standard #page.drawers .main-inner,
+    body.limitedwidth #page.drawers .main-inner,
+    #page.drawers .main-inner,
+    .moove-container-fluid,
+    .container-fluid,
+    .container-lg,
+    .container-md,
+    .container-sm,
+    .container-xl,
+    .container-xxl {
+        max-width: 95%;
+    }
+}

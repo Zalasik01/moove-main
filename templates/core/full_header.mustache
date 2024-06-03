@@ -1,0 +1,117 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_moove/full_header
+
+    This template renders the header.
+
+    Example context (json):
+    {
+        "contextheader": "context_header_html",
+        "settingsmenu": "settings_html",
+        "hasnavbar": false,
+        "navbar": "navbar_if_available",
+        "courseheader": "course_header_html",
+        "welcomemessage": "welcomemessage"
+    }
+}}
+<header id="page-header" class="moove-container-fluid">
+    <div class="d-flex flex-wrap">
+        <div class="ml-auto d-flex">
+            {{{pageheadingbutton}}}
+        </div>
+        <div id="course-header">
+            {{{courseheader}}}
+        </div>
+    </div>
+    <div class="altimuss card card-body shadow" style="">
+    <table style="width: 100%;">
+        <thead>
+            <tr style="display: flex; align-items: center;">
+                <th scope="col" style="width: 60%;">
+                    <h2 style="color: #007bff;"> Bem Vindo a Universidade Altimus!</h2>
+                    <p style="margin-right: 20px; margin-botton: 10px; color: #80868b; font-weight: 400;">A Universidade Altimus foi criada para auxiliar você na busca por informações, resoluções de dúvidas sobre o produto, ajudar a configurar recursos quando necessário e trazer conhecimentos relevantes sobre o sistema.</p>
+                </th>
+                <th class="btnd" scope="col">
+                    <a class="linhaoff" href="https://altimus.movidesk.com/kb" target="_blank">
+                        <button class="card card-body shadow shadowartigos" title="Artigos">
+                        <br><i class="fa fa-comment" style="font-size: 25px; color: #007bff;"></i> 
+                        <p>Artigos<br>Altimus</p>
+                        </button>
+                    </a>
+                    <a class="linhaoff" href="https://universidade-novo.altimus.com.br/?redirect=0#" target="_blank">
+                        <button class="card card-body shadow shadowartigos" style="text-align: center !important; margin-right: 20px !important;" title="Cursos">
+                        <br><i class="fa-solid fa-book-open-reader" style="font-size: 25px; color: #007bff;"></i> 
+                        <p>Veja todos<br>os cursos</p>
+                        </button>
+                    </a>
+                    <a class="linhaoff" href="https://universidade-novo.altimus.com.br/my/courses.php" target="_blank">
+                        <button class="card card-body shadow shadowartigos" style="text-align: center !important; margin-right: 20px !important;" title="Cursos">
+                        <br><i class="fa-solid fa-pencil" style="font-size: 25px; color: #007bff;"></i> 
+                        <p>Meus<br>cursos</p>
+                        </button>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <button onclick="topFunction()" id="myBtn" title="Voltar ao topo"><i class="fa-solid fa-angles-up uparrow"></i></button>
+
+    <script>
+        // Mostra o botão de voltar ao topo quando o usuário rolar a página para baixo
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("myBtn").style.display = "block";
+          } else {
+            document.getElementById("myBtn").style.display = "none";
+          }
+        }
+
+        // Quando o botão é clicado, rola suavemente para o topo da página
+        function topFunction() {
+          const scrollStep = -window.scrollY / (500 / 15); // 500 é a duração da animação em milissegundos, 15 é a quantidade de passos por milissegundo
+          const scrollInterval = setInterval(function(){
+            if ( window.scrollY != 0 ) {
+              window.scrollBy( 0, scrollStep );
+            }
+            else clearInterval(scrollInterval);
+          },15);
+        }
+    </script>
+        </tbody>
+    </table>
+    <br>
+    <p></p>
+    </div>
+    <div class="d-sm-flex align-items-center">    
+        
+        {{> core/welcome }}
+        <div class="header-actions-container ml-auto" data-region="header-actions-container">
+            {{#headeractions}}
+                <div class="header-action ml-2">{{{.}}}</div>
+            {{/headeractions}}
+        </div>
+
+        {{#hasnavbar}}
+            <div class="d-none d-md-block" id="page-navbar">
+                {{{navbar}}}
+            </div>
+        {{/hasnavbar}}
+    </div>
+</header>
