@@ -188,7 +188,27 @@
         background-color: #f4f4f4;
         margin-top: 10px;
 }
+    .iconeslp {
+        .fa-file-alt {
+            color: #3498db; /* Cor azul para artigos */
+        }
 
+        .fa-file-signature {
+            color: #2ecc71; /* Cor verde para transcrições */
+        }
+
+        .fa-chalkboard-teacher {
+            color: #e74c3c; /* Cor vermelha para cursos */
+        }
+
+        .fa-video {
+            color: #f1c40f; /* Cor amarela para webinars */
+        }
+
+        .fa-lightbulb {
+            color: #9b59b6; /* Cor roxa para dicas práticas */
+        }
+    }
     .iconeslp {
         position: relative;
         margin-left: 5px;
@@ -211,7 +231,6 @@
         }
       }
     /* Cardboxsw */
-
     .shadow {
         transition: box-shadow 0.3s ease, border-left 0.3s ease;
 
